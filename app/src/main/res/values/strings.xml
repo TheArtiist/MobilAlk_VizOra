@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">OnlineVizoraLejelentes</string>
+    <string name="udvozlo">Üdvözöljük az SZTE Víznél</string>
+    <string name="emailcim">Email cím</string>
+    <string name="jelszo">Jelszó</string>
+    <string name="jelszo2">Jelszó Újra</string>
+    <string name="bejelentkezes">Bejelentkezés</string>
+    <string name="regisztracio">Regisztráció</string>
+    <string name="udvozlo_main">Miben segíthetünk?</string>
+    <string name="szamlak">Számlák</string>
+    <string name="vizorale">Vízóra lejelentés</string>
+    <string name="hiba_be">Hiba bejelentése</string>
+    <string name="ugyfelszol">Ügyfélszolgálat</string>
+    <string name="informaciok">Vízminőség és Információk</string>
+    <string name="tudatoshasznalat">Tudatos vízhasználat</string>
+</resources>

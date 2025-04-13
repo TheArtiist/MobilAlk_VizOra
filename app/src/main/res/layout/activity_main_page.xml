@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/main"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/background_image"
+    android:padding="16dp">
+
+    <TextView
+        android:id="@+id/titleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="56dp"
+        android:text="@string/udvozlo_main"
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/billsButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="28dp"
+        android:padding="12dp"
+        android:text="@string/szamlak"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.493"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/waterMeterReportButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:padding="12dp"
+        android:text="@string/vizorale"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/billsButton"
+        app:layout_constraintWidth_percent="0.8"/>
+
+
+    <Button
+        android:id="@+id/errorReportButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:padding="12dp"
+        android:text="@string/hiba_be"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterMeterReportButton"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/customerServiceButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:padding="12dp"
+        android:text="@string/ugyfelszol"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/errorReportButton"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/waterQualityButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="52dp"
+        android:padding="12dp"
+        android:text="@string/informaciok"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/customerServiceButton"
+        app:layout_constraintWidth_percent="0.8" />
+
+    <Button
+        android:id="@+id/consciousUsageButton"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="16dp"
+        android:padding="12dp"
+        android:text="@string/tudatoshasznalat"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.506"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/waterQualityButton"
+        app:layout_constraintVertical_bias="0.133"
+        app:layout_constraintWidth_percent="0.8" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
