@@ -27,6 +27,7 @@
         android:layout_height="48dp"
         android:hint="@string/emailcim"
         android:inputType="textEmailAddress"
+        android:importantForAccessibility="yes"
         android:padding="8dp"
         android:textColorHint="@color/white"
         android:textColor="@color/white"/>

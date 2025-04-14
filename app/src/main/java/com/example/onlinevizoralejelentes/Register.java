@@ -76,4 +76,9 @@ private final String  LOG_TAG = MainActivity.class.getName();
         startActivity(intent);
     }
 
+    public void cancelButton(View view) {
+        Intent intent = new Intent(this, MainActivity.class);
+        // intent.putExtra("SECRET_KEY",10);
+        startActivity(intent);
+    }
 }
