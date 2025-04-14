@@ -13,4 +13,5 @@
     <string name="ugyfelszol">Ügyfélszolgálat</string>
     <string name="informaciok">Vízminőség és Információk</string>
     <string name="tudatoshasznalat">Tudatos vízhasználat</string>
+    <string name="logout">Kijelentkezés</string>
 </resources>

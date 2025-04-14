@@ -1,4 +1,5 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,6 +28,7 @@
         android:hint="@string/emailcim"
         android:inputType="textEmailAddress"
         android:padding="8dp"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"/>
 
     <EditText
@@ -37,17 +39,9 @@
         android:hint="@string/jelszo"
         android:inputType="textPassword"
         android:padding="8dp"
+        android:textColorHint="@color/white"
         android:textColor="@color/white"/>
 
-    <EditText
-        android:id="@+id/password2EditText"
-        android:layout_width="match_parent"
-        android:layout_height="48dp"
-        android:layout_marginTop="8dp"
-        android:hint="@string/jelszo2"
-        android:inputType="textPassword"
-        android:padding="8dp"
-        android:textColor="@color/white"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -61,8 +55,11 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:onClick="loginButton"
-            android:theme="@style/Button.darkPurple"
             android:padding="8dp"
+            android:backgroundTint="@color/red"
+            app:cornerRadius="0dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:text="@string/bejelentkezes" />
 
         <Button
@@ -72,7 +69,10 @@
             android:layout_marginStart="16dp"
             android:onClick="registerButton"
             android:padding="8dp"
-            android:theme="@style/Button.red"
+            android:backgroundTint="@color/red"
+            app:cornerRadius="0dp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
             android:text="@string/regisztracio" />
     </LinearLayout>
 

@@ -32,6 +32,10 @@
         app:layout_constraintEnd_toStartOf="@id/waterMeterReportButton"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintWidth_percent="0.45" />
 
     <Button
@@ -44,6 +48,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@id/billsButton"
         app:layout_constraintTop_toBottomOf="@id/titleTextView"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         app:layout_constraintWidth_percent="0.45" />
 
     <Button
@@ -56,6 +64,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/customerServiceButton"
         app:layout_constraintWidth_percent="0.45"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginTop="16dp" />
 
     <Button
@@ -68,6 +80,10 @@
         app:layout_constraintStart_toEndOf="@id/errorReportButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.45"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginTop="16dp" />
 
     <Button
@@ -80,6 +96,10 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toStartOf="@id/consciousUsageButton"
         app:layout_constraintWidth_percent="0.45"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginTop="16dp" />
 
     <Button
@@ -92,6 +112,10 @@
         app:layout_constraintStart_toEndOf="@id/waterQualityButton"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintWidth_percent="0.45"
+        android:backgroundTint="@color/red"
+        app:cornerRadius="0dp"
+        android:textStyle="bold"
+        android:textColor="@color/white"
         android:layout_marginTop="16dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
