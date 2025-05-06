@@ -15,4 +15,9 @@
     <string name="tudatoshasznalat">Tudatos vízhasználat</string>
     <string name="logout">Kijelentkezés</string>
     <string name="cancel">Mégse</string>
+    <string name="iranyito_szam">Irányító szám</string>
+    <string name="city">Város</string>
+    <string name="street">Utca</string>
+    <string name="haz_szam">Ház szám</string>
+    <string name="save">Mentés</string>
 </resources>
