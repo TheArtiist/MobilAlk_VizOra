@@ -11,7 +11,6 @@
     android:padding="16dp">
 
     <LinearLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="16dp"
@@ -66,9 +65,9 @@
             android:id="@+id/spinningImage"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:src="@drawable/sztelogo.jpg"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
-            android:layout_alignParentEnd="true"/>
+            android:src="@drawable/sztelogo" />
 
     </LinearLayout>
 

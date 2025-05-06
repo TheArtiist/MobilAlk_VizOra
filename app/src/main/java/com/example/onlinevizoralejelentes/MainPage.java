@@ -32,6 +32,10 @@ public class MainPage extends AppCompatActivity {
             return insets;
         });
 
+        TextView textView = findViewById(R.id.titleTextView);
+        Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.welcome_anim);
+        textView.startAnimation(slideIn);
+
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
             Log.d(LOG_TAG,"Authenticated user");
@@ -44,15 +48,18 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-        TextView textView = findViewById(R.id.titleTextView);
-        Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.welcome_anim);
-        textView.startAnimation(slideIn);
+
     }
 
 
     public void logoutButton(View view){
         Intent intent = new Intent(this,MainActivity.class);
         //intent.putExtra("SECRET_KEY",123456789);
+        startActivity(intent);
+    }
+
+    public void waterMeterReportButton(View view){
+        Intent intent = new Intent(this, LocationInfoActivity.class);
         startActivity(intent);
     }
 }
