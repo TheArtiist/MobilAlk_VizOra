@@ -69,6 +69,18 @@
             android:layout_alignParentBottom="true"
             android:src="@drawable/sztelogo" />
 
+        <EditText
+            android:id="@+id/editTextMeterValue"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:layout_marginTop="20dp"
+            android:hint="Enter water meter value"
+            android:inputType="number"
+            android:padding="10dp"
+            android:textColorHint="@color/white"
+            android:textColor="@color/white"/>
+
+
     </LinearLayout>
 
 
