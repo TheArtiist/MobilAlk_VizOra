@@ -64,6 +64,7 @@ public class MainActivity extends AppCompatActivity {
                     Toast.makeText(MainActivity.this,"User was not loggedd in", Integer.parseInt(task.getException().getMessage())).show();
                 }
             }
+
         });
 
     }

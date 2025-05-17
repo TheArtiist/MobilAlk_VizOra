@@ -1,6 +1,6 @@
 package com.example.onlinevizoralejelentes;
 
-public class Vizora {
+public class Invoices {
     private int id;
     private String email;
     private int zipCode;
@@ -10,7 +10,8 @@ public class Vizora {
     private int vizOraAllas;
 
     // Email = User Id
-    public Vizora(String email,int zipCode, String varos, String utca, int hazNum, int vizOraAllas){
+
+    public Invoices(String email,int zipCode, String varos, String utca, int hazNum, int vizOraAllas){
         this.email = email;
         this.zipCode = zipCode;
         this.varos = varos;
@@ -19,35 +20,23 @@ public class Vizora {
         this.vizOraAllas = vizOraAllas;
     }
 
-
-
     ////////////////////////////////////////////////////////////////////////////////////////
     ///////                         |
     /////// Getterek / Setterek     |
     ///////                         v
     ////////////////////////////////////////////////////////////////////////////////////////
 
-    public int getZipCode() {
-        return zipCode;
-    }
+    public int getZipCode() {return zipCode;}
 
-    public String getVaros() {
-        return varos;
-    }
+    public String getVaros() {return varos;}
 
-    public String getUtca() {
-        return utca;
-    }
+    public String getUtca() {return utca;}
 
-    public int getHazNum() {
-        return hazNum;
-    }
+    public int getHazNum() {return hazNum;}
 
-    public int getVizOraAllas() {
-        return vizOraAllas;
-    }
+    public int getVizOraAllas() {return vizOraAllas;}
 
-    public String getEmail() {
-        return email;
-    }
+    public String getEmail() {return email;}
+
+
 }

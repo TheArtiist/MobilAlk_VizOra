@@ -1,6 +1,7 @@
 package com.example.onlinevizoralejelentes;
 
 import android.os.Bundle;
+import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
@@ -43,5 +44,13 @@ public class LocationInfoActivity extends AppCompatActivity {
     protected void onPause() {
         super.onPause();
         spinningImage.clearAnimation();  // Stops spinning when user leaves the page
+    }
+
+    public void saveLocation(View view){
+
+    }
+
+    public void cancelButton(View view){
+
     }
 }

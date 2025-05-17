@@ -1,7 +1,9 @@
 package com.example.onlinevizoralejelentes;
 
+import android.animation.ObjectAnimator;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.DisplayMetrics;
 import android.util.Log;
 import android.view.View;
 import android.view.animation.Animation;
@@ -20,6 +22,8 @@ import com.google.firebase.auth.FirebaseUser;
 
 public class MainPage extends AppCompatActivity {
     private static final String LOG_TAG = MainPage.class.getName();
+    private TextView movingText;
+    private ObjectAnimator animator;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,9 +36,20 @@ public class MainPage extends AppCompatActivity {
             return insets;
         });
 
-        TextView textView = findViewById(R.id.titleTextView);
-        Animation slideIn = AnimationUtils.loadAnimation(this, R.anim.welcome_anim);
-        textView.startAnimation(slideIn);
+        movingText = findViewById(R.id.titleTextView);
+
+
+        DisplayMetrics displayMetrics = getResources().getDisplayMetrics();
+        int screenWidth = displayMetrics.widthPixels;
+
+
+        animator = ObjectAnimator.ofFloat(movingText, "translationX", 0, screenWidth - movingText.getWidth());
+        animator.setDuration(3000);
+        animator.setRepeatCount(ObjectAnimator.INFINITE);
+        animator.setRepeatMode(ObjectAnimator.REVERSE);
+        animator.start();
+
+
 
         FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
         if(user != null){
@@ -48,8 +63,15 @@ public class MainPage extends AppCompatActivity {
     @Override
     protected void onResume() {
         super.onResume();
-
+        animator.resume();
     }
+
+    @Override
+    protected void onPause() {
+        super.onPause();
+        animator.cancel();
+    }
+
 
 
     public void logoutButton(View view){

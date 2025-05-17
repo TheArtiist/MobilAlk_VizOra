@@ -29,6 +29,7 @@
             android:id="@+id/editTextCity"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginTop="20dp"
             android:hint="@string/city"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
@@ -37,6 +38,7 @@
             android:id="@+id/editTextStreet"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginTop="20dp"
             android:hint="@string/street"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
@@ -45,41 +47,67 @@
             android:id="@+id/editTextHouseNumber"
             android:layout_width="match_parent"
             android:layout_height="48dp"
+            android:layout_marginTop="20dp"
             android:hint="@string/haz_szam"
             android:inputType="number"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
-
-        <Button
-            android:id="@+id/buttonSaveLocation"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:backgroundTint="@color/red"
-            app:cornerRadius="0dp"
-            android:textStyle="bold"
-            android:textColor="@color/white"
-            android:text="@string/save"
-            android:layout_gravity="center"/>
-
-        <ImageView
-            android:id="@+id/spinningImage"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/sztelogo" />
 
         <EditText
             android:id="@+id/editTextMeterValue"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:layout_marginTop="20dp"
-            android:hint="Enter water meter value"
+            android:hint="@string/viz_ora_allas"
             android:inputType="number"
             android:padding="10dp"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
 
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/buttonSaveLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="saveLocation"
+                android:padding="8dp"
+                android:backgroundTint="@color/red"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/upload" />
+
+            <Button
+                android:id="@+id/buttonCancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:onClick="cancelButton"
+                android:padding="8dp"
+                android:backgroundTint="@color/red"
+                app:cornerRadius="0dp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:text="@string/cancel" />
+        </LinearLayout>
+
+
+
+        <ImageView
+            android:id="@+id/spinningImage"
+            android:layout_marginTop="20dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@drawable/sztelogo" />
 
     </LinearLayout>
 

@@ -20,4 +20,6 @@
     <string name="street">Utca</string>
     <string name="haz_szam">Ház szám</string>
     <string name="save">Mentés</string>
+    <string name="viz_ora_allas">Víz óra állás:</string>
+    <string name="upload">Feltöltés</string>
 </resources>

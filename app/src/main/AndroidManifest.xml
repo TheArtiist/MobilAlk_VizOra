@@ -13,6 +13,9 @@
         android:theme="@style/Theme.OnlineVizoraLejelentes"
         tools:targetApi="31">
         <activity
+            android:name=".WaterMeterUploadActivity"
+            android:exported="false" />
+        <activity
             android:name=".LocationInfoActivity"
             android:exported="false" />
         <activity
