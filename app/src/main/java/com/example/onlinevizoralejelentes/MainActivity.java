@@ -20,10 +20,14 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
 
 public class MainActivity extends AppCompatActivity {
     private final String  LOG_TAG = MainActivity.class.getName();
     private FirebaseAuth mAuth;
+
+    private FirebaseFirestore db = FirebaseFirestore.getInstance();
+
     private static final int SECRET_KEY= 123456789;
     @Override
     protected void onCreate(Bundle savedInstanceState) {

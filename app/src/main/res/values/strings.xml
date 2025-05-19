@@ -22,4 +22,8 @@
     <string name="save">Mentés</string>
     <string name="viz_ora_allas">Víz óra állás:</string>
     <string name="upload">Feltöltés</string>
+    <string name="vissza">Vissza</string>
+    <string name="v_z_ra_ll_s">Vízóra állás</string>
+    <string name="c_m">Cím</string>
+    <string name="email">Email</string>
 </resources>

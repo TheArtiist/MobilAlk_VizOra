@@ -1,23 +1,26 @@
 package com.example.onlinevizoralejelentes;
 
 public class Invoices {
-    private int id;
+    private String id;
     private String email;
     private int zipCode;
     private String varos;
     private String utca;
     private int hazNum;
     private int vizOraAllas;
+    private String imageUrl;
 
     // Email = User Id
 
-    public Invoices(String email,int zipCode, String varos, String utca, int hazNum, int vizOraAllas){
+    public Invoices(){}
+    public Invoices(String email,int zipCode, String varos, String utca, int hazNum, int vizOraAllas, String imageUrl){
         this.email = email;
         this.zipCode = zipCode;
         this.varos = varos;
         this.utca = utca;
         this.hazNum = hazNum;
         this.vizOraAllas = vizOraAllas;
+        this.imageUrl = imageUrl;
     }
 
     ////////////////////////////////////////////////////////////////////////////////////////
@@ -37,6 +40,12 @@ public class Invoices {
     public int getVizOraAllas() {return vizOraAllas;}
 
     public String getEmail() {return email;}
+
+    public String getImageUrl(){return imageUrl;}
+
+    public String getId(){return id;}
+
+    public void setId(String id){this.id = id;}
 
 
 }

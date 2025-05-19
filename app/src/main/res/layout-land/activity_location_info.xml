@@ -1,44 +1,74 @@
-<?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:background="@drawable/background_image"
-    android:orientation="vertical"
-    android:padding="16dp">
+    android:padding="16dp"
+    tools:orientation="horizontal">
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:padding="16dp"
+        android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <EditText
-            android:id="@+id/editTextPostalCode"
-            android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:hint="@string/iranyito_szam"
-            android:inputType="number"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"/>
+    <LinearLayout
+        android:id="@+id/formContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/spinningImage"
+        android:padding="16dp">
 
-        <EditText
-            android:id="@+id/editTextCity"
+        <LinearLayout
+            android:id="@+id/addressRow"
             android:layout_width="match_parent"
-            android:layout_height="48dp"
-            android:layout_marginTop="20dp"
-            android:hint="@string/city"
-            android:textColorHint="@color/white"
-            android:textColor="@color/white"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <EditText
+                android:id="@+id/editTextPostalCode"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:hint="@string/iranyito_szam"
+                android:inputType="number"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+
+            <EditText
+                android:id="@+id/editTextCity"
+                android:layout_width="0dp"
+                android:layout_height="48dp"
+                android:layout_weight="1"
+                android:layout_marginStart="8dp"
+                android:hint="@string/city"
+                android:textColorHint="@color/white"
+                android:textColor="@color/white"/>
+        </LinearLayout>
 
         <EditText
             android:id="@+id/editTextStreet"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/street"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
@@ -47,7 +77,7 @@
             android:id="@+id/editTextHouseNumber"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/haz_szam"
             android:inputType="number"
             android:textColorHint="@color/white"
@@ -57,13 +87,11 @@
             android:id="@+id/editTextMeterValue"
             android:layout_width="match_parent"
             android:layout_height="48dp"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="16dp"
             android:hint="@string/viz_ora_allas"
             android:inputType="number"
-            android:padding="10dp"
             android:textColorHint="@color/white"
             android:textColor="@color/white"/>
-
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -74,28 +102,28 @@
 
             <Button
                 android:id="@+id/buttonUpload"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:onClick="uploadMeter"
                 android:padding="8dp"
                 android:backgroundTint="@color/red"
-                app:cornerRadius="0dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:text="@string/upload" />
 
             <Button
                 android:id="@+id/buttonCancel"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="16dp"
+                android:layout_weight="1"
                 android:onClick="cancelButton"
                 android:padding="8dp"
                 android:backgroundTint="@color/red"
-                app:cornerRadius="0dp"
                 android:textStyle="bold"
                 android:textColor="@color/white"
                 android:text="@string/cancel" />
+
         </LinearLayout>
 
         <ImageView
@@ -119,19 +147,19 @@
             android:textColor="@color/white"
             android:text="Kép készítése az óráról"
             android:onClick="captureImage"/>
+    </LinearLayout>
 
-
-
-        <ImageView
-            android:id="@+id/spinningImage"
-            android:layout_marginTop="20dp"
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:src="@drawable/sztelogo" />
+    <ImageView
+        android:id="@+id/spinningImage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:src="@drawable/sztelogo"/>
 
     </LinearLayout>
+
+    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
