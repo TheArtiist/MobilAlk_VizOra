@@ -258,12 +258,12 @@ public class LocationInfoActivity extends AppCompatActivity {
     }
 
 
-
-    public void selectImage(View view) {
+    //Ha nem kamerával, hanem gallériából akarnám megoldani a képet
+    /*public void selectImage(View view) {
         Intent intent = new Intent(Intent.ACTION_PICK);
         intent.setType("image/*");
         startActivityForResult(intent, PICK_IMAGE_REQUEST);
-    }
+    }*/
 
 
     @Override

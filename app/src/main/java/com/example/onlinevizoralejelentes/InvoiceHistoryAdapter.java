@@ -37,7 +37,20 @@ public class InvoiceHistoryAdapter extends RecyclerView.Adapter<InvoiceHistoryAd
         holder.address.setText(invoice.getZipCode() + " " + invoice.getVaros() + ", " + invoice.getUtca() + " " + invoice.getHazNum());
         holder.vizOraAllas.setText(String.valueOf(invoice.getVizOraAllas()));
 
-
+        /*
+        // Törlés gomb művelete
+        holder.deleteButton.setOnClickListener(v -> {
+            FirebaseFirestore db = FirebaseFirestore.getInstance();
+            db.collection("invoices").document(invoice.getId())
+                    .delete()
+                    .addOnSuccessListener(aVoid -> {
+                        Toast.makeText(v.getContext(), "Számla törölve!", Toast.LENGTH_SHORT).show();
+                        invoicesList.remove(position);
+                        notifyItemRemoved(position);
+                    })
+                    .addOnFailureListener(e ->
+                            Toast.makeText(v.getContext(), "Hiba történt a törlés során!", Toast.LENGTH_SHORT).show());
+        });*/
 
 
     }
@@ -49,6 +62,7 @@ public class InvoiceHistoryAdapter extends RecyclerView.Adapter<InvoiceHistoryAd
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         TextView email, address, vizOraAllas;
+        //Button deleteButton;
 
 
         public ViewHolder(View itemView) {

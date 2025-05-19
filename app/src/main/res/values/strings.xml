@@ -26,4 +26,5 @@
     <string name="v_z_ra_ll_s">Vízóra állás</string>
     <string name="c_m">Cím</string>
     <string name="email">Email</string>
+    <string name="delete">Törlés</string>
 </resources>
